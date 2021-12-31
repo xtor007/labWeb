@@ -46,5 +46,5 @@ ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
 
-ev.listen(process.env.PORT, () => console.log(`http://localhost:${PORT}/form`))
+ev.listen(app.get("port"), app.get("ipaddr"), () => console.log(`http://localhost:${PORT}/form`))
 //ev.listen
