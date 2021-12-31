@@ -4,7 +4,7 @@ const mailer = require('./mail')
 
 const ev = express()
 
-const PORT = 3001
+const PORT = process.env.PORT
 
 ev.use(bodyParser.urlencoded({ extended: false }))
 
