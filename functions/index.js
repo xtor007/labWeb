@@ -37,7 +37,7 @@ ev.post('/form',(req,res) => {
 
 ev.get('/form',(req,res) => {
   const path = require("path")
-  res.sendFile(path.resolve('../public/index.html'))
+  res.sendFile(path.resolve('public/index.html'))
 })
 
 ev.get('/main.css', function(req, res) {
