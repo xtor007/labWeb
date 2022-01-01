@@ -2,8 +2,5 @@
   "dependencies": {
     "express": "^4.17.2",
     "nodemailer": "^6.7.2"
-  },
-  "engines": {
-    "node": "16.9.1"
   }
 }
