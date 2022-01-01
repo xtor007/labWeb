@@ -50,6 +50,6 @@ ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
 
-ev.listen(PORT, function(){
+ev.listen(PORT, '0.0.0.0', function(){
   console.log(`http://localhost:${PORT}/form`)
 })
