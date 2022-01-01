@@ -1,6 +1,6 @@
 {
   "name": "labweb",
-  "version": "1.0.0",
+  
   "description": "labWeb",
   "main": "functions/index.js",
   "scripts": {
