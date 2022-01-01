@@ -41,7 +41,7 @@ ev.get('/form',(req,res) => {
   res.sendFile(path.resolve('public/index.html'))
 })
 
-app.get('/', (req, res) => {
+ev.get('/', (req, res) => {
   const path = require("path")
   res.sendFile(path.resolve('public/index.html'))
 })
