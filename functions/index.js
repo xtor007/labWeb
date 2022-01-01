@@ -41,6 +41,11 @@ ev.get('/form',(req,res) => {
   res.sendFile(path.resolve('public/index.html'))
 })
 
+app.get('/', (req, res) => {
+  const path = require("path")
+  res.sendFile(path.resolve('public/index.html'))
+})
+
 ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
