@@ -5,9 +5,9 @@ const mailer = require('./mail')
 const ev = express()
 
 //const PORT = process.env.PORT||'8080'
-const PORT = process.env.YOUR_PORT || 9000
+const PORT = process.env.PORT //|| 9000
 
-//ev.use(bodyParser.urlencoded({ extended: false }))
+ev.use(bodyParser.urlencoded({ extended: false }))
 
 ev.use('/galaxy.html', express.static(__dirname + '/../public/galaxy.html'))
 ev.use('/index.html', express.static(__dirname + '/../public/index.html'))
@@ -50,6 +50,6 @@ ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
 
-ev.listen(PORT, process.env.YOUR_HOST, function(){
+ev.listen(PORT, process.env.IP, function(){
   console.log(`http://localhost:${PORT}/form`)
 })
