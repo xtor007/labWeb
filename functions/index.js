@@ -19,11 +19,11 @@ ev.use('/main.css', express.static(__dirname + '/../public/main.css'))
 
 
 ev.post('/form',(req,res) => {
-  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(req.body.email)) {
-    res.send('error email')
-  } else if (req.body.name === '') {
-    res.send('error name')
-  } else {
+  // if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(req.body.email)) {
+  //   res.send('error email')
+  // } else if (req.body.name === '') {
+  //   res.send('error name')
+  // } else {
     const message = {
       from: '<a.khramchenko.ip01@gmail.com>',
       to: 'tolxpams@gmail.com',
@@ -32,7 +32,7 @@ ev.post('/form',(req,res) => {
     }
     mailer(message)
     res.redirect('/form')
-  }
+  //}
 })
 
 ev.get('/form',(req,res) => {
@@ -46,5 +46,5 @@ ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
 
-ev.listen(app.get("port"), app.get("ipaddr"), () => console.log(`http://localhost:${PORT}/form`))
+ev.listen(PORT, () => console.log(`http://localhost:${PORT}/form`))
 //ev.listen
