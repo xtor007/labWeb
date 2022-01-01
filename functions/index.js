@@ -6,7 +6,7 @@ const ev = express()
 
 
 const port = process.env.PORT //|| 9000
-const ip = process.env.IP
+const ip = process.env.IP || '0.0.0.0'
 
 ev.use(bodyParser.urlencoded({ extended: false }))
 
@@ -52,5 +52,5 @@ ev.get('/main.css', function(req, res) {
 })
 
 ev.listen(port, ip, function(){
-  console.log(`http://localhost:${PORT}/form`)
+  console.log(`http://${ip}:${port}/form`)
 })
