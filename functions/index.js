@@ -5,7 +5,7 @@ const mailer = require('./mail')
 const ev = express()
 
 //const PORT = process.env.PORT||'8080'
-const PORT = process.env.PORT || 3000
+const PORT = process.env.YOUR_PORT || 3000
 
 ev.use(bodyParser.urlencoded({ extended: false }))
 
@@ -50,6 +50,6 @@ ev.get('/main.css', function(req, res) {
   res.sendFile(__dirname + '../public/main.css')
 })
 
-ev.listen(PORT, '0.0.0.0', function(){
+ev.listen(PORT, process.env.YOUR_HOST, function(){
   console.log(`http://localhost:${PORT}/form`)
 })
