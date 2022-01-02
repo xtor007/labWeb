@@ -18,6 +18,9 @@ ev.use('/apparatus.html', express.static(__dirname + '/../public/apparatus.html'
 ev.use('/loading3.gif', express.static(__dirname + '/../public/loading3.gif'))
 ev.use('/img.jpg', express.static(__dirname + '/../public/img.jpg'))
 ev.use('/main.css', express.static(__dirname + '/../public/main.css'))
+ev.use('/slider.css', express.static(__dirname + '/../public/slider.css'))
+ev.use('/form.css', express.static(__dirname + '/../public/form.css'))
+ev.use('/burger.css', express.static(__dirname + '/../public/burger.css'))
 
 
 ev.post('/form',(req,res) => {
