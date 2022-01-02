@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="./main.css">
 		<link rel="stylesheet" href="./slider.css">
 		<link rel="stylesheet" href="./form.css">
+		<link rel="stylesheet" href="./burger.css">
 		<title>Orbital speed</title>
 	</head>
 	<body>
@@ -11,14 +12,23 @@
 		<div class="container12345">
 
 			<div class="container1">
-				<h5>Menu:</h5>
-				<ul>
-					<li><a href="/index.html">Orbital speed</a></li>
-					<li><a href="/parabola.html">Parabola speed</a></li>
-					<li><a href="/hyperbola.html">Hyperbola speed</a></li>
-					<li><a href="/galaxy.html">Speed to exit the galaxy</a></li>
-					<li><a href="/apparatus.html">Speed developing apparatus</a></li>
-				</ul>
+
+				<div class="burgerMenu">
+					<input type="checkbox" id="check_menu">
+					<label for="check_menu"><h5>MENU:</h5></label>
+					<div class="burgerLine l1"></div>
+					<div class="burgerLine l2"></div>
+					<div class="burgerLine l3"></div>
+					<div class="burgerLine l4"></div>
+					<nav class="menu_links">
+						<a href="/index.html">Orbital speed</a>
+						<a href="/parabola.html">Parabola speed</a>
+						<a href="/hyperbola.html">Hyperbola speed</a>
+						<a href="/galaxy.html">Speed to exit the galaxy</a>
+						<a href="/apparatus.html">Speed developing apparatus</a>
+					</nav>
+				</div>
+
 				<form method="POST" action="/form" id="form" class="formBody">
 					<h3>Send to email</h3>
 					<div class="formClass">
